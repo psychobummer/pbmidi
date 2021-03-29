@@ -91,7 +91,7 @@ func Inputs() ([]string, error) {
 		available[i] = fmt.Sprintf("%s", name)
 	}
 
-	return nil, err
+	return available, err
 }
 
 // Stop shuts down the underlying midi driver and input
