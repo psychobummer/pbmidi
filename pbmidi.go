@@ -60,7 +60,7 @@ func New(deviceNum int) (MidiStream, error) {
 		return nil, fmt.Errorf("requested device %d, but only have %d devices", deviceNum, len(inputs))
 	}
 
-	input := inputs[0] // this is probably sufficient for now.
+	input := inputs[deviceNum]
 	input.Open()
 
 	ctx, cancel := context.WithCancel(context.Background())
